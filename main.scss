@@ -1,0 +1,84 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+* {
+  flex-shrink: 0;
+}
+
+a {
+  color: inherit;
+  &:hover {
+  };
+}
+
+html {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+$length: 5s;
+
+@keyframes spin {
+  0% {
+    transform: rotate(-1.5turn);
+  }
+  60%, 90% {
+    transform: rotate(0.125turn);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes fadein2 {
+  0%, 60% {
+    opacity: 0;
+  }
+  70%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+svg {
+  animation: $length spin both ease-out;
+  width: 15rem;
+  width: 30vm;
+  * {
+    fill: #4BA8B3;
+  }
+  path:not(#cross) {
+    animation: $length fadein2 both linear;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+p {
+  text-align: center;
+  animation: 1s $length fadein both;
+}
