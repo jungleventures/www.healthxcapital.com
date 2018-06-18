@@ -1,7 +1,7 @@
 # Site settings
-title: Health x Capital
+title: HealthXCapital
 description: > # this means to ignore newlines until "baseurl:"
-  Coming soon.
+  HXC converges Clinical Providers, Commercial Partners and Impactful Startups to accelerate reach in Asia
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.healthxcapital.com" # the base hostname & protocol for your site
 
