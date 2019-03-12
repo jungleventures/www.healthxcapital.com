@@ -25,45 +25,30 @@ permalink: /portfolio/
         </div>
     </div>
 </section>
- 
-    <!--section class="portfolio-hd">
-    <div class="container">
-        <h3>Lorem epsum</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-    </div>
-</section-->
+
 <section class="portfolio-main">
     <div class="container">
         <div class="row">
+            {% for company in site.portfolio %}
             <div class="col-md-4 col-sm-6">
-                <a href="#" data-toggle="modal" data-target="#JanaCare">
-                    <div class="portfolio-box"><i class="top-cornner"></i><img src="/images/portfolio/janacare.png" alt="">
+                <a href="#" data-toggle="modal" data-target="#{{ company.title | slugify }}">
+                    <div class="portfolio-box"><i class="top-cornner"></i><img src="/images/portfolio/{{ company.logo }}" alt="">
                         <div class="caption-box">
                             <span class="ct-popup-btn"></span>
-                            <h4>JanaCare</h4>
-                            <p>Point-of-care diagnostics and digital coaching programs for the screening and management chronic diseases</p>
+                            <h4>{{ company.title }}</h4>
+                            <p>{{ company.blurb }}</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#" data-toggle="modal" data-target="#Homage">
-                    <div class="portfolio-box"><i class="top-cornner"></i><img src="/images/portfolio/homage.svg" alt="">
-                        <div class="caption-box">
-                            <span class="ct-popup-btn"></span>
-                            <h4>Homage</h4>
-                            <p>On-demand home and community-based caregiving to seniors and adults</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            {% endfor %}
         </div>
         <!-- p class="btn-box"><a href="javascript:;" class="btn load-more">LOAD MORE</a></p -->
     </div>
 </section>
 
-<!-- Modal -->
-<div class="modal team-popup portfolio fade animated slideInRight" id="JanaCare" role="dialog">
+{% for company in site.portfolio %}
+<div class="modal team-popup portfolio fade animated slideInRight" id="{{ company.title | slugify }}" role="dialog">
     <div class="container">
         <!-- Modal content-->
         <div class="modal-content">
@@ -73,104 +58,34 @@ permalink: /portfolio/
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </p>
                 </div>
-                <h3>Jana Care</h3>
+                <h3>{{ company.title }}</h3>
                 <div class="clearfix brdb">
                     <div class="col-md-4 col-sm-5">
-                        <div class="portfolio-box"><i class="top-cornner"></i><img src="/images/portfolio/janacare.png" alt=""> </div>
+                        <div class="portfolio-box"><i class="top-cornner"></i><img src="/images/portfolio/{{ company.logo }}" alt=""> </div>
                     </div>
                     <div class="col-md-7 col-sm-7">
-                        <p>Founded in 2011, Jana Care is a medical technology company that develops point-of-care diagnostics and digital coaching programs for the screening and management chronic diseases. Its novel CE marked diagnostic platform, Aina, enables testing of HbA1c, Blood Glucose, Lipid Profile and Hemoglobin using fingerstick blood samples, with new tests for NT-proBNP and Serum Creatinine in development. The company has also developed the Habits Program, a digital coaching program for patients with Diabetes and Congestive Heart Failure, in collaboration with leading academic medical centers globally.</p>
-                        <p>Jana Care is headquartered in Boston, USA, and has established an ISO 13485 certified production facility in Bangalore, India.</p>
-                        <p class="btn-box"><a href="http://www.janacare.com/about.html" class="btn">Visit Website</a></p>
+                        {{ company.output }}
+                        <p class="btn-box"><a href="{{ company.link }}" class="btn outbound">Visit Website</a></p>
                     </div>
                 </div>
-                <div class="clearfix">
-                    <h4>Founders</h4>
+                {% for founder in company.founders %}
+                <div class="clearfix{% if forloop.index > 0 %} MT50{% endif %}">
+                    {% if forloop.first %}<h4>Founders</h4>{% endif %}
                     <div class="col-md-4 col-sm-5">
-                        <div class="core-team-box"><i class="top-cornner"></i><img src="/images/founders/sidhant.jpg" alt="">
+                        <div class="core-team-box"><i class="top-cornner"></i><img src="/images/founders/{{ founder.portrait }}" alt="">
                             <div class="ct-caption-box">
-                                <h4>Sidhant Jena</h4>
-                                <p>Co-Founder, CEO</p>
+                                <h4>{{ founder.name }}</h4>
+                                <p>{{ founder.title }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7 col-sm-7">
-                        <p>Sidhant worked at Medtronic in various R&D roles, before founding Jana Care. He received his BS and MS in Electrical Engineering from Georgia Tech and an MBA from Harvard Business School.</p>
+                        <p>{{ founder.biography | markdownify }}</p>
                     </div>
                 </div>
-                <div class="clearfix MT50">
-                    <div class="col-md-4 col-sm-5">
-                        <div class="core-team-box"><i class="top-cornner"></i><img src="/images/founders/michal.jpg" alt="">
-                            <div class="ct-caption-box">
-                                <h4>Michal Depa</h4>
-                                <p>Co-Founder, CTO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-sm-7">
-                        <p>Michal was a researcher at MIT working on computer vision and medical imaging, before starting Jana Care. He received his BS in Electrical Engineering from McGill University and MS in Computer Science from MIT.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-
-<div class="modal team-popup portfolio fade animated slideInRight" id="Homage" role="dialog">
-    <div class="container">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="popup-container">
-                <div class="col-md-12 clearfix">
-                    <p>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </p>
-                </div>
-                <h3>Homage</h3>
-                <div class="clearfix brdb">
-                    <div class="col-md-4 col-sm-5">
-                        <div class="portfolio-box"><i class="top-cornner"></i><img src="/images/portfolio/homage.svg" alt=""> </div>
-                    </div>
-                    <div class="col-md-7 col-sm-7">
-                        <p>Homage is a complete care solution that combines trained care professionals with smart technology to manage and provide on-demand home and community-based caregiving to seniors and adults, allowing them to age and recover at home with grace, control and dignity.</p>
-
-                        <p>Home-grown as a technology platform in Singapore, Homage has received awards including Social Enterprise of the year by Singapore President’s Challenge, RaiSE Leap For Good, Most Promising Startup by OCBC Emerging Enterprise as well as Best Home Care Operator by Aging Asia. Homage was also cited by Singapore’s Prime Minister Lee Hsien Loong as giving many seniors and their families peace of mind.</p>
-                        <p class="btn-box"><a href="http://www.homage.co" class="btn">Visit Website</a></p>
-                    </div>
-                </div>
-                <div class="clearfix">
-                    <h4>Founders</h4>
-                    <div class="col-md-4 col-sm-5">
-                        <div class="core-team-box"><i class="top-cornner"></i><img src="/images/founders/gillian.jpg" alt="">
-                            <div class="ct-caption-box">
-                                <h4>Gillian Tee</h4>
-                                <p>Co-Founder, CEO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-sm-7">
-                        <p>Gillian Tee is the co-founder and CEO of Homage. Gillian’s mission with Homage is to equip and inspire a new generation of caregivers to provide individualized and personal care at scale. Enabling all to live, age and recover back within their communities and homes with more choice and fulfilment is what motivated Gillian to build Homage and is at the heartbeat of the entire Homage team.</p>
-
-                        <p>Prior to Homage, Gillian co-founded Rocketrip, a Y-Combinator, Google Ventures and Bessemer Ventures-backed travel technology company based in New York City and Silicon Valley that rewards employee for generating cost savings. Prior to Rocketrip, Gillian held various sales, business development, product management and technology leadership positions at Amazon and Accenture. Gillian has an MBA and Master of International Affairs from Columbia Business School and Columbia School of International and Public Affairs; she also studied Computer Science with a focus on Machine Learning and Artificial Intelligence at the University of Melbourne.</p>
-                    </div>
-                </div>
-                <div class="clearfix MT50">
-                    <div class="col-md-4 col-sm-5">
-                        <div class="core-team-box"><i class="top-cornner"></i><img src="/images/founders/lily.jpg" alt="">
-                            <div class="ct-caption-box">
-                                <h4>Lily Phang</h4>
-                                <p>Co-Founder, COO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-sm-7">
-                        <p>Lily Phang is the co-founder and COO of Homage. With a passion to bring health into the community, she believes that home care should be easily accessible and yet affordable for all. Seeing seniors receiving quality care and care professionals finding meaning in their lives through caregiving keeps Lily energized everyday.</p>
-
-                        <p>Lily started her career with International SOS, oversaw 24-hour emergency alarm centres in Singapore, Greater China, and the wider Asian region. She was involved in the setup of a joint-venture in Stuttgart, Germany, and also several company-wide mega projects, such as shared services project in Asia Region, IT implementation for all the alarm centres. She ran Specialist Outpatient Clinics and Call Centres with Jurong Health for more than two years before joining Singapore General Hospital Hospital’s Planning Team. Lily graduated with a BSc (Business Management) with Singapore Institute of Management.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+{% endfor %}

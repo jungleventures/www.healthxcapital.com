@@ -7,3 +7,7 @@ url: "http://www.healthxcapital.com" # the base hostname & protocol for your sit
 
 # Build settings
 markdown: kramdown
+
+collections:
+  portfolio:
+    output: false
