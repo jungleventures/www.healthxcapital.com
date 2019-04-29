@@ -11,3 +11,5 @@ markdown: kramdown
 collections:
   portfolio:
     output: false
+  news_external:
+    output: false
