@@ -1,0 +1,21 @@
+---
+title: Child Health Imprints
+link: https://www.childhealthimprints.com/
+logo: childhealthimprints.png
+blurb: Incepted to save the lives of infants in data way
+founders:
+  - name: Harpreet Singh
+    title: Co-Founder, CEO
+    portrait: harpreet.jpg
+    biography: |
+      Accomplished engineer/seasoned entrepreneur with over 20 years of experience in Healthcare Informatics and Engineering domain with a record of achievements in scientific and technology leadership roles. International product and consulting experience across Europe, USA and Asia with Mckinsey, Philips, Stryker and Intuit. Experience spanning diverse industries (Healthcare , Enterprise Software & Services, Management Consulting, Research & Development) and skill sets (Product Management, Value Engineering, Business Head, Sales Strategy, Analytics, Systems Engineering and Strategy Consulting)  Founded iNICU in 2016, a company streamlining the entire workflow of NICU by integrating data from various medical devices and other sources. Earlier, setup and led a multidisciplinary teams of 5 - 40 members building software products for US and German market. Involved in research and all aspects of software development and product management. Collaborated with University of Wisconsin, Madison on number of academic service contracts along with industry collaborations with EGI and Philips.
+  - name: Ravneet Kaur
+    title: Co-Founder, VP
+    portrait: ravneet.jpg
+    biography: |
+      Seasoned entrepreneur with over 12 years of experience in healthcare domain , research  & development , building and managing teams, project development , project management and unparalleled client service. Skilled relationship builder with clients in separately managed accounts. Experience in understanding various business process , gathering business requirements, identifying risks and doing impact analysis.Founded iNICU in 2016 with the purpose of saving neonatal lives though predictive analytics . Collaborated with mathematicians, research analysts, neonatologists, biomedical and IoT team for generating publications in reputed scientific journals. Driven strong sales, channel and marketing alignment with initiatives and processes for traction and scaling up in ASEAN and US . Software development and engineering skills with genuine enthusiasm for resolving business challenges through technical innovation. Directed projects in healthcare domain focusing on IOT , Big Data and Analytical techniques. 
+---
+
+Child Health Imprints (CHIL), a company incorporated for improving clinical care outcomes in neonatal intensive care units (NICU) using bed side IoT and Artificial intelligence based disease prediction capability.According to a WHO report published in 2017, globally 2.5 million babies die within the first 27 days of their life. Prematurity, infections, delay in treatment, skill manpower shortage and human-based medical errors are the major causes of neonatal deaths. Lack of data integration amongst multiple devices (patient monitor, ventilaor, blood gas machines, infusion pumps) in a NICU, EMR adoption in NICU and unified neonatal workflow practices are urgent needs of rising neonatal births across world.
+
+Harpreet Singh & Ravneet Kaur faced similar challenges when their twins were born preterm and one of twins passed away within one week of birth due to NEC. They built bedside IoT based technology comprising of NEO that interoperates with various medical devices used in NICU. NEO aggregated data in a vendor agnostic manner offering temporal (longitudinal) data of their stay in NICU that reduces manual charting effort of nurses. The solution also comprises a  bedside tablet based interface to ensure prospective data entry, which is supported by artificial intelligence based iNICU analytics engine that infers millions of data-points persisted in time-series representation. By leveraging clinical rules and deep learning based disease specific (Respiratory Distress, Sepsis, BPD) analytical models, iNICU assist the neonatologists in focussing on neonatal care and identifying the early onset of diseases. They further plan to setup collaboration with machine learning expert in one of the largest university NICU in US and improve their decision support offering as the company launches from its Singapore home base to grow in new markets in Asia.
