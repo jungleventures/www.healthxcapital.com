@@ -1,17 +1,17 @@
 ---
 title: Praktice.ai
 link: https://www.praktice.ai/
-logo: Praktice.png
+logo: praktice.png
 blurb: Enabling healthcare organizations to optimize their staffing, boost profitability and enhance clinical care.
 founders:
   - name: Akhila Adabala
     title: Co-Founder, COO
-    portrait: Akhila.jpg
+    portrait: akhila.jpg
     biography: |
       Dr. Akhila is an Oral Surgeon. Having experience in clinical practice with patients at healthcare organizations like Manipal and Vasan in Bangalore and having managed the Hospital Operations, she drives her passion in solving these complex hospital operations using technology. 
   - name: Srinath Akula
     title: Co-Founder, CEO
-    portrait: Srinath.jpg
+    portrait: srinath.jpg
     biography: |
       Srinath, having worked at Flipkart and 24x7 Inc previously, drives his passion of solving problems at scale. He Architected & managed the big data & insights system at Flipkart Supply Chain and an experience in speech technology for United Airlines at 24x7. He drives the Technology and the complex data architectures for the deeptech AI product of Praktice.ai 
 ---
